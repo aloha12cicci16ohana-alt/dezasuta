@@ -1,0 +1,499 @@
+@charset "UTF-8";
+body {
+    background: #e8d9bf; 
+}
+
+header {
+  position: relative; /* ヘッダー内absoluteの基準 */
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.86%;
+    /* 55 / 1920*100=2.86% */
+    padding-right: 7.55%;
+    /* 145 / 1920*100=7.55% */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.hamburger,
+.header__nav-sp {
+    display: none;
+}
+.header__nav {
+    display: block; 
+}
+.logo {
+    width: 226px;
+}
+.header__nav ul {
+    display: flex;
+    gap: 70px;
+    list-style: none; 
+    margin: 0;        
+    padding: 0;       
+}
+.header__nav a{
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+}
+
+.section-title {
+    margin-bottom: 30px; 
+    line-height: 1;  
+}
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.heading-h2 img
+{
+    height: 78px;
+    width: auto;
+}
+.heading-h2 {
+    text-align: center;  
+    margin-bottom: 30px; 
+    margin-top: 0;
+}
+
+/* イントロ */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.intro-1 {
+    font-size: 30px;
+    margin-bottom: 54px;
+}
+
+.intro-2 {
+    font-size: 82px;
+    margin-bottom: 49px;
+    line-height: 96px;
+}
+
+.intro-text {
+    font-size: 23px;
+    line-height: 38px;
+}
+
+
+/* About Us */
+.about_us__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about_us__image {
+    flex: 1;
+}
+
+.about_us__image img {
+    border-radius: 50px 0 50px 0;
+}
+
+.about_us__text {
+    flex: 1;
+}
+
+.about_us__text .heading-h2 {
+    text-align: left;
+}
+
+.about_us__text h3 {
+    font-size: 44px;
+    margin-bottom: 49px;
+    line-height: 61px;
+}
+
+.about_us__text p {
+    line-height: 26px;
+}
+
+/* Menu */
+.menu-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.menu-item {
+    width: 32%;
+    text-align: center;
+}
+
+.menu-img img {
+    border-radius: 0 40px 0 40px;
+}
+
+.menu-name {
+    font-size: 38px;
+    margin-top: -10px;
+    margin-bottom: 24px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.menu-name.red {
+    color: #c92a2a;
+}
+
+.menu__text {
+    font-size: 17px;
+    line-height: 25px;
+    text-align: left;
+}
+
+/* Gallery */
+.gallery-row {
+    display: block !important;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.gallery-row img {
+    width: 100%;       
+    height: auto;      
+    box-sizing: border-box;
+}
+
+/* Event */
+.event__list{
+    margin: 0 auto;        
+    border: 2px solid #4a3b32;
+    padding: 36px 100px;      
+    background: #fff;
+}
+
+.event__box {
+    line-height: 1.6;
+    padding: 22px 0;        
+    display: flex;
+    gap: 40px;               
+    align-items: center; 
+}
+.event__list {
+    text-align: center;
+}
+
+.event__item {
+    display: flex;
+    font-size: 23px;
+    margin-bottom: 28px;
+}
+
+.event__item:last-child {
+    margin-bottom: 0;
+}
+.event-date{
+    width: 160px;             
+}
+
+.event-text {
+    flex: 1;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+
+}
+/* Access */
+.access {
+    padding-bottom: 0;
+}
+
+.map-wrapper {
+    width: 100%;
+    filter: grayscale(100%) invert(90%);
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    padding: 85px 0 80px;
+}
+
+.footer-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 86px;
+    gap: 67px;
+}
+
+.footer-logo {
+    width: 227px;
+    height: auto;
+}
+
+.footer-text p {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+
+.page-top {
+    display: block; 
+    width: 125px;    
+    height: 125px; 
+    position: fixed; 
+    right: 10px;     
+    bottom: 20px;    
+    z-index: 100;    
+
+    opacity: 0;             
+    pointer-events: none;  
+    transition: opacity 0.3s;
+}
+
+.page-top.is-show {
+    opacity: 1;  
+    pointer-events: auto;  
+}
+
+.page-top.is-show:hover {
+    opacity: 0.7; 
+    text-align: center;
+    font-size: 16px;
+    margin-top: 60px;
+    color: #777;
+}
+
+.copyright {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .header__nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .hamburger span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        top: 13px;
+        transition: 0.3s;
+    }
+    .hamburger span::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        top: -13px;
+        transition: 0.3s;
+    }
+    .hamburger span::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        bottom: -13px;
+        transition: 0.3s;
+    }
+    .open span {
+        background-color: transparent;
+    }
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+}
+    .open span::after {
+        z-index: 9999;
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .header__nav-sp {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000c9;
+    }
+    .header__nav-sp a {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+        "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: bold;
+    }
+    .header__nav-sp ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 15px;
+    }
+    /* 全体 */
+    .container {
+        padding: 0 20px;
+    }
+    /* イントロ */
+.intro-1 {
+    font-size: 17px;
+    margin-bottom: 31px;
+}
+
+.intro-2 {
+    font-size: 38px;
+    margin-bottom: 31px;
+    line-height: 44px;
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+
+/* 1. About Us */
+    .about_us__container {
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .about_us__text {
+        display: contents;
+    }
+
+    .about_us__text .heading-h2 {
+        order: 1;           
+        text-align: center; 
+        margin-bottom: 0;   
+    }
+
+    .about_us__image {
+        order: 2;
+        margin-left: -20px;
+        margin-right: -20px;
+    }         
+    
+    .about_us__image img {
+        width: 100%; 
+    border-radius: 0;
+    }
+
+    .about_us__text h3 {
+        order: 3;          
+        font-size: 36px;
+        margin-bottom: 15px; 
+        line-height: 1.4;
+        margin-top: 10px;  
+    }
+
+    .about_us__text p {
+        order: 4;          
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+
+    /* 2. Menu  */
+    .menu-grid {
+        flex-direction: column; 
+        gap: 50px;
+    }
+
+    .menu-item {
+        width: 100%; 
+    }
+
+    .menu-name {
+    font-size: 40px;
+}
+.menu__text {
+    font-size: 17px;
+    line-height: 27px;
+}
+/* イベント */
+.event__item {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+.event__list {
+    text-align: left;
+    padding: 24px 29px;
+    font-size: 16px;      
+}
+    .event__box {
+        flex-direction: column;  
+    }
+    .event__item {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .event-date {
+        width: 100%; 
+    }
+    /* 3. Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center; 
+        gap: 30px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-text p {
+        text-align: left;
+        font-size: 18px;
+    }
+    
+
+}
+
+
+.slick-dots {
+    bottom: 16px;
+}
+.slick-dots li button:before {
+    color: #ffffff;
+}
+.slick-dots li.slick-active button:before {
+    color: #ffffff;
+}
